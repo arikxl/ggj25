@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Desc from "../components/Desc";
 import Img from "../components/Img";
 import Scala from "../components/Scala";
@@ -12,21 +12,27 @@ import Next from "../components/nextNtn/Next";
 const Question = () => {
 
 
-    const [qIndx, setqIdx] = useState<number>(0);
+    const [qIndx, setQIdx] = useState<number>(0);
     const [question, setQuestion] = useState<QuestionType>(questions[qIndx]);
     const [score, setScore] = useState<number>(50);
-
+    
+    
+    // useEffect(() => {
+    //     console.log('aa',qIndx)
+    //     setQuestion(questions[qIndx])
+    // }, [qIndx])
 
     return (
         <main className="question">
-            <AnswerList question={question} setQuestion={setQuestion} setScore={setScore} score={score} />
-            <section>
+            <AnswerList qIndx={qIndx } question={question} setQuestion={setQuestion} setScore={setScore} score={score} />
+            <section className="flex">
                 <Img src={question.src} />
+                    <br />
                 <div style={{ display: question.isActive ? 'none' : 'block' }}>
 
                     <Desc desc={question.desc}  />
                     <br />
-                    <Next />
+                    <Next setQIdx={setQIdx} qIndx={qIndx} setQuestion={setQuestion } />
                 </div>
             </section>
             <Scala score={score} />
