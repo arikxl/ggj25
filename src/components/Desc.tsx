@@ -1,11 +1,11 @@
 
 type Props = {
-    desc:string
+  desc: string;
 }
 
 const Desc = ({ desc }: Props) => {
   return (
-      <h1 className="desc">{desc}</h1>
+    <h1 className="desc"   >{desc} </h1>
   )
 }
 

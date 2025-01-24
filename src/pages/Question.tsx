@@ -1,32 +1,33 @@
-// import React from 'react'
 
+import { useState } from "react";
 import Desc from "../components/Desc";
 import Img from "../components/Img";
 import Scala from "../components/Scala";
+import { questions, Question as QuestionType } from '../data/data';
+import AnswerList from "../components/AnswerList";
+import Next from "../components/nextNtn/Next";
 
-type Props = {
-    question: {
-        src: string;
-        answers: []
-        // answer1: { text: string; score: number };
-        // answer2: { text: string; score: number };
-        // answer3: { text: string; score: number };
-        desc: string;
-    };
-    score:number
-};
 
-const Question = ({ question, score }: Props) => {
 
-    console.log(question)
+const Question = () => {
+
+
+    const [qIndx, setqIdx] = useState<number>(0);
+    const [question, setQuestion] = useState<QuestionType>(questions[qIndx]);
+    const [score, setScore] = useState<number>(50);
 
 
     return (
         <main className="question">
-            <div>sss</div>
+            <AnswerList question={question} setQuestion={setQuestion} setScore={setScore} score={score} />
             <section>
                 <Img src={question.src} />
-                <Desc desc={question.desc} />
+                <div style={{ display: question.isActive ? 'none' : 'block' }}>
+
+                    <Desc desc={question.desc}  />
+                    <br />
+                    <Next />
+                </div>
             </section>
             <Scala score={score} />
 

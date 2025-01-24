@@ -1,7 +1,7 @@
 // import React from 'react'
 
 type Props = {
-    score:number
+    score: number
 }
 
 const Scala = ({ score }: Props) => {
@@ -9,13 +9,34 @@ const Scala = ({ score }: Props) => {
 
     return (
         <>
-            <div className="scala-wrapper">
-                <div className="scala-inner" style={{height: `${score}%`}}>
-                <h2>
-                    {score}
-                </h2>
+            <section className="scala-wrapper">
+                <div className="scala-inner" style={{ height: `${score}%` }}>
+
+
+                    <div className="button">
+
+                        <div className="points_wrapper">
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                            <i className="point"></i>
+                        </div>
+
+                        <h2 className="inner">
+                            {score}
+                        </h2>
+                    </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 }
