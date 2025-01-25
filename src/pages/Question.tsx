@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Desc from "../components/Desc";
 import Img from "../components/Img";
 import Scala from "../components/Scala";
@@ -7,14 +7,17 @@ import { questions, Question as QuestionType } from '../data/data';
 import AnswerList from "../components/AnswerList";
 import Next from "../components/nextNtn/Next";
 
+type Props = {
+    score: number;
+    setScore: React.Dispatch<React.SetStateAction<number>>;
+};
 
-
-const Question = () => {
+const Question = ({ score, setScore }: Props) => {
 
 
     const [qIndx, setQIdx] = useState<number>(0);
     const [question, setQuestion] = useState<QuestionType>(questions[qIndx]);
-    const [score, setScore] = useState<number>(50);
+    // const [score, setScore] = useState<number>(50);
     
     
     // useEffect(() => {

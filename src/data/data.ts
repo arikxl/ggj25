@@ -70,6 +70,25 @@ export const questions: Question[] = [
         isActive:true
     },
     {
+        src: 'https://res.cloudinary.com/arikxl/image/upload/v1737799952/Ella2023/j5anz7okgtnckum3six4.jpg',
+        answers: [
+            {
+                text: 'Gargle',
+                score: -5,
+            },
+            {
+                text: 'Flush',
+                score: 10,
+            },
+            {
+                text: 'Drink',
+                score: -10,
+            },
+        ],
+        desc: 'Human Piss',
+        isActive:true
+    },
+    {
         src: 'https://res.cloudinary.com/arikxl/image/upload/v1737749478/Ella2023/usdhb2xjhuqmi3uygnzb.jpg',
         answers: [
             {
@@ -87,5 +106,24 @@ export const questions: Question[] = [
         ],
         desc: 'Garbage Juice',
         isActive:true
+    },
+    {
+        src: 'https://res.cloudinary.com/arikxl/image/upload/v1737800433/Ella2023/bmm35ziv1cqbzuuxbd1t.jpg',
+        answers: [
+            {
+                text: 'Swallow',
+                score: 10,
+            },
+            {
+                text: 'Spit',
+                score: -5,
+            },
+            {
+                text: 'Lick',
+                score: 1,
+            },
+        ],
+        desc: 'Milkshake',
+        isActive: true
     },
 ];
