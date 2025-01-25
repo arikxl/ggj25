@@ -96,7 +96,7 @@ export const questions: Question[] = [
                 score: -10,
             },
             {
-                text: 'Trow',
+                text: 'Throw',
                 score: 10,
             },
             {
