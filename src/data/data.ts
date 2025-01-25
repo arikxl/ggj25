@@ -85,7 +85,7 @@ export const questions: Question[] = [
                 score: -10,
             },
         ],
-        desc: 'Human Piss',
+        desc: 'This is Piss',
         isActive:true
     },
     {
@@ -106,6 +106,25 @@ export const questions: Question[] = [
         ],
         desc: 'Garbage Juice',
         isActive:true
+    },
+    {
+        src: 'https://res.cloudinary.com/arikxl/image/upload/v1737804295/Ella2023/emhgxa29ns6ejssifmdk.jpg',
+        answers: [
+            {
+                text: 'Lick',
+                score: -10,
+            },
+            {
+                text: 'Touch',
+                score: 1,
+            },
+            {
+                text: 'Wipe',
+                score: 10,
+            },
+        ],
+        desc: 'Human Sweat',
+        isActive: true
     },
     {
         src: 'https://res.cloudinary.com/arikxl/image/upload/v1737800433/Ella2023/bmm35ziv1cqbzuuxbd1t.jpg',

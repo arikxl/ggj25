@@ -76,6 +76,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   font-size: 50px;
+  z-index: 10;
 }
 
 .desc {
@@ -245,4 +246,31 @@ body {
         font-size: 50px;
         letter-spacing: 2px;
         margin-bottom: 30px;
+}
+
+
+
+
+.lose{
+  background-image: url('https://res.cloudinary.com/arikxl/image/upload/v1737802662/Ella2023/rpurtjdd2h33phii59tj.gif');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lose p{
+  color: white;
+      font-family: 'HOPALOPE BUBBLE TRIAL', sans-serif;
+        text-shadow: 1px 1px 1px black;
+        font-size: 150px;
+        color: #b03;
+}
+
+.winP{
+    font-size: 200px;
 }

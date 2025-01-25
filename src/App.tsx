@@ -3,6 +3,8 @@ import { useState } from 'react';
 import './App.css'
 import Question from './pages/Question';
 import Start from './pages/Start';
+import Lose from './pages/Lose';
+import Win from './pages/Win';
 
 
 function App() {
@@ -19,7 +21,11 @@ function App() {
       {
         !isGameOn
           ? <Start setIsGameOn={setIsGameOn} />
-          : <Question score={score} setScore={setScore} />
+          : score < 1
+            ? <Lose setScore={setScore} />
+            : score > 99
+              ? <Win setScore={setScore} />
+              : <Question score={score} setScore={setScore} />
       }
 
 

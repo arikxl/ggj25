@@ -31,10 +31,10 @@ const Scala = ({ score }: Props) => {
                             <i className="point"></i>
                         </div>
 
+                    </div>
                         <h2 className="inner">
                             {score}
                         </h2>
-                    </div>
                 </div>
             </section>
         </>
